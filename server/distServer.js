@@ -3,7 +3,7 @@
 
 import browserSync from 'browser-sync';
 import historyApiFallback from 'connect-history-api-fallback';
-import {chalkProcessing} from './chalkConfig';
+import {chalkProcessing} from '../tools/chalkConfig';
 
 /* eslint-disable no-console */
 
@@ -20,7 +20,7 @@ browserSync({
   },
 
   files: [
-    'src/*.html'
+    '../src/*.html'
   ],
 
   middleware: [historyApiFallback()]
