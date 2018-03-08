@@ -1,17 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const Nomination = require('../models/Nomination');
+const Sprint = require('../models/Sprint');
 
 router.route('/')
 
   .get((req, res) => {
-    Nomination.find()
+    Sprint.find()
     .then(nominations => res.send(nominations))
     .catch(err => res.send(err))
   })
 
   .post((req, res) => {
-    Nomination.create(req.body)
+    Sprint.create(req.body)
   .then(nomination => res.send(nomination))
   .catch(err => res.send(err))
   })
@@ -19,7 +19,7 @@ router.route('/')
 router.route('/clear')
 
   .delete((req, res) => {
-    Nomination.remove()
+    Sprint.remove()
     .then(() => res.send('All deleted'))
     .catch(err => res.send(err))
   })
