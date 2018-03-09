@@ -13,18 +13,8 @@ import NotFoundPage from './NotFoundPage/NotFoundPage';
 
 class App extends React.Component {
   render() {
-    const activeStyle = { color: 'blue' };
     return (
       <div>
-        <div>
-          <NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink>
-          {' | '}
-          <NavLink to="/vote" activeStyle={activeStyle}>Add Nominations</NavLink>
-          {' | '}
-          <NavLink to="/nominate" activeStyle={activeStyle}>Vote</NavLink>
-          {' | '}
-          <NavLink to="/about" activeStyle={activeStyle}>About</NavLink>
-        </div>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/vote" component={VotePage} />
