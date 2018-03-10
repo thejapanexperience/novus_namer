@@ -1,0 +1,62 @@
+.section0 {
+  @extend.flex;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(0,0,0,.6);
+  z-index: 5;
+}
+
+.navBox {
+  @extend .flex;
+  width: 100%;
+  max-width: 1024px;
+  height: auto;
+  margin: auto;
+  color: white;
+}
+
+.link {
+  color:inherit;
+  text-decoration: none;
+}
+
+.NavLink {
+  @extend .link;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.NavLink1st {
+  @extend .NavLink;
+  margin-left: 0px;
+  margin-right: 5px;
+}
+
+.NavLinkActive {
+  @extend .NavLink;
+  color:pink;
+  text-decoration: none;
+}
+
+.nav1 {
+  @extend .flex;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  .nav1Text {
+    width: 100%;
+    margin: auto;
+    padding-left: 2%;
+    @include responsive-font(3vw, 30px, 30px, 30px);
+    text-align: left;
+  }
+  .nav1Text2 {
+    @extend .nav1Text;
+    @extend .font2;
+    @include responsive-font(2vw, 25px, 25px, 25px);
+    text-align: left;
+  }
+}
+
+.nav2 {
+  @extend .nav1;
+}

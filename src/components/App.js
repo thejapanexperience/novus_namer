@@ -1,7 +1,9 @@
 /* eslint-disable import/no-named-as-default */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Switch, NavLink, Route } from 'react-router-dom';
+import {Switch, NavLink, Route} from 'react-router-dom';
+import Header from './Common/Header';
+import TabBar from './Common/TabBar';
 import HomePage from './HomePage/HomePage';
 import AboutPage from './AboutPage/AboutPage';
 import VotePage from './VotePage/VotePage';
@@ -13,16 +15,19 @@ import NotFoundPage from './NotFoundPage/NotFoundPage';
 
 class App extends React.Component {
   render() {
-    return (
-      <div>
+    return (<div className="app">
+      <div className="backgroundImage"/>
+      <div className="mainContainer">
+        <Header/>
+        <TabBar/>
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/vote" component={VotePage} />
-          <Route path="/about" component={AboutPage} />
-          <Route component={NotFoundPage} />
+          <Route exact path="/" component={HomePage}/>
+          <Route path="/vote" component={VotePage}/>
+          <Route path="/about" component={AboutPage}/>
+          <Route component={NotFoundPage}/>
         </Switch>
       </div>
-    );
+    </div>);
   }
 }
 

@@ -1,0 +1,54 @@
+.tabFont {
+  @include responsive-font(1.5vw, 6px, 16px, 16px);
+}
+
+.TabBar {
+  @extend .flex;
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.tabBar {
+  @extend .flex;
+  margin: auto;
+  width: 100%;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  // @extend .shadowFull;
+}
+
+.tabBarTab {
+  @extend .flex;
+  @extend .transition1;
+  text-decoration: none;
+  width: 33%;
+  height: 100px;
+  margin-top: 5px;
+  color: white;
+  background-color: $color1;
+  background-color: $colorGradient22;
+  &:hover {
+    background-color: rgba(255, 255, 255, .4);
+    // color: $color1;
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.tabBarTabActive {
+  &:hover {
+    background-color: $colorGradient11;
+    color: white;
+    cursor: pointer;
+  }
+  @extend .tabBarTab;
+  background-color: $colorGradient11;
+  pointer-events: none;
+}
+
+.tabBarTabTitle {
+  @extend .tabFont;
+  margin: auto;
+}
