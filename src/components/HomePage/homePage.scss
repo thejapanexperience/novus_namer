@@ -4,47 +4,70 @@
   width: 100%;
   padding-top: 40px;
   padding-bottom: 20px;
+  
+  .section1 {
+    @extend .flex;
+    @extend .section;
+    height: auto;
+    margin-bottom: auto;
+    border: 0;
+    text-align: center;
+    color: white;
+    
+    .titleText {
+      margin: 0;
+      width: 100%;
+      color: pink;
+      font-size: 8vw;
+      // @include responsive-font(8vw, 35px, 100px, 50px);
+      // text-shadow: 5px 5px 5px rgba(0,0,0,.2);
+    }
+    
+    .bodyText {
+      @extend .font2;
+      margin: 0;
+      width: 100%;
+      font-size: 4vw;
+      // @include responsive-font(2vw, 20px, 20px, 20px);
+      padding-top: 10px;
+      
+      .bodyBold {
+        @extend .font1;
+        font-weight: bold; 
+      }
+      .bodyPink {
+        color: pink;
+        // font-weight: bold;
+      }
+    }
+    
+    .imageSection {
+      @extend .flex;
+      min-width: 65vw;
+      border: white 5px solid;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      // padding: 10px;
+      
+      .image {
+        @extend.flex;
+        min-width: 65vw;
+        height: auto;
+        margin: auto;
+
+        .img {
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+    
+  }
 }
 
-.section1 {
-  @extend .flex;
-  @extend .section;
-  height: auto;
-  margin-bottom: auto;
-  border: 0;
-  text-align: center;
-  color: white;
-}
 
-.imageSection {
-  @extend .flex;
-  border: white 5px solid;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-}
-
-.image {
-  @extend.flex;
-  height: auto;
-  margin: auto;
-}
 
 //MiniProject --------------------------------------------------------------------
 
-.titleText {
-  margin: 0;
-  width: 100%;
-  color: white;
-  @include responsive-font(8vw, 35px, 100px, 50px);
-  // text-shadow: 5px 5px 5px rgba(0,0,0,.2);
-}
-
-.bodyText {
-  @extend .titleText;
-  @extend .font2;
-  @include responsive-font(2vw, 20px, 20px, 20px);
-  padding-top: 10px;
-}

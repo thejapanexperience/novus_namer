@@ -11,14 +11,15 @@ const HomePage = () => {
       <MainButton text="Nominate" address="/nominate"/>
       <MainButton text="Vote" address="/vote"/> */}
 
-      <h2 className="titleText">Sprint Namer</h2>
       <p className="bodyText">
-        richardmands.com presents 'Sprint Namer', an app that can help you to manage your sprint naming ceremonies.
+        <span className="bodyBold">richardmands.com</span>
       </p>
+      <h2 className="titleText">Sprint Namer</h2>
+      <p className="bodyText">An app that can help you to manage your sprint naming ceremonies.</p>
 
       <div className="imageSection">
         <div className="image">
-          <img className="img" src={require('../../images/swanson.jpg')} alt="Cartoon"/>
+          <img className="img" src={require('../../images/swanson.png')} alt="Cartoon"/>
         </div>
       </div>
     </div>

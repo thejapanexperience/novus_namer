@@ -1,10 +1,11 @@
 .tabFont {
-  @include responsive-font(1.5vw, 6px, 16px, 16px);
+  font-size: 3vw;
+  // @include responsive-font(1.5vw, 6px, 16px, 16px);
 }
 
 .TabBar {
   @extend .flex;
-  width: 100%;
+  width: 95%;
   max-width: 1024px;
   margin: auto;
   margin-top: 20px;
