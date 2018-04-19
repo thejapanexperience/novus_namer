@@ -1,0 +1,9 @@
+.newSprintContainer {
+  @extend .flex;
+  width: 100%;
+  .text {
+    margin: auto;
+    color: white;
+    font-size: 50px;
+  }
+}

@@ -30,15 +30,11 @@
       font-size: 4vw;
       // @include responsive-font(2vw, 20px, 20px, 20px);
       padding-top: 10px;
-      
-      .bodyBold {
-        @extend .font1;
-        font-weight: bold; 
-      }
-      .bodyPink {
-        color: pink;
-        // font-weight: bold;
-      }
+    }
+    
+    .bodyBold {
+      @extend .bodyText;
+      font-size: 5vw; 
     }
     
     .imageSection {

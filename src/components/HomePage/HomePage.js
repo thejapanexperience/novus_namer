@@ -11,9 +11,7 @@ const HomePage = () => {
       <MainButton text="Nominate" address="/nominate"/>
       <MainButton text="Vote" address="/vote"/> */}
 
-      <p className="bodyText">
-        <span className="bodyBold">richardmands.com</span>
-      </p>
+      <p className="bodyBold">richardmands.com</p>
       <h2 className="titleText">Sprint Namer</h2>
       <p className="bodyText">An app that can help you to manage your sprint naming ceremonies.</p>
 
